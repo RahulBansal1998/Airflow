@@ -32,7 +32,7 @@ with DAG('store_dag',default_args=default_args,schedule_interval='@daily', templ
     t7 = BashOperator(task_id='move_file2', bash_command='cat ~/store_files_airflow/store_wise_profit.csv && mv ~/store_files_airflow/store_wise_profit.csv ~/store_files_airflow/store_wise_profit_%s.csv' % yesterday_date)
 
     t8 = EmailOperator(task_id='send_email',
-        to='example@example.com',
+        to='rahull.bansall16@gmail.com',
         subject='Daily report generated',
         html_content=""" <h1>Congratulations! Your store reports are ready.</h1> """,
         files=['/usr/local/airflow/store_files_airflow/location_wise_profit_%s.csv' % yesterday_date, '/usr/local/airflow/store_files_airflow/store_wise_profit_%s.csv' % yesterday_date])

@@ -25,11 +25,11 @@ services:
             - mysql
         environment:
             - INSTALL_MYSQL=y
-            - LOAD_EX=n
+            - LOAD_EX=y
             - EXECUTOR=Local
             - AIRFLOW__SMTP__SMTP_HOST=smtp.gmail.com
-            - AIRFLOW__SMTP__SMTP_USER=example@gmail.com
-            - AIRFLOW__SMTP__SMTP_PASSWORD=hdwiondmyyobhlto
+            - AIRFLOW__SMTP__SMTP_USER=kollguy95@gmail.com
+            - AIRFLOW__SMTP__SMTP_PASSWORD=auimpfjblleuxdot
             - AIRFLOW__SMTP__SMTP_PORT=587
             - AIRFLOW__SMTP__SMTP_MAIL_FROM=Airflow
         volumes:
